@@ -1,0 +1,27 @@
+@font-face {
+      font-family: 'OrstedSans';
+      src: url('../fonts/MaineSans-Regular.eot') format('embedded-opentype'),
+          url('../fonts/MaineSans-Regular.woff') format('woff'),
+          url('../fonts/MaineSans-Regular.ttf')  format('truetype');
+          font-style:normal;
+          font-weight:400;
+    }
+
+   @font-face {
+      font-family: 'OrstedSans';
+      src: url('../fonts/MaineSans-Bold.eot') format('embedded-opentype'),
+          url('../fonts/MaineSans-Bold.woff') format('woff'),
+          url('../fonts/MaineSans-Bold.ttf')  format('truetype');
+          font-style:normal;
+          font-weight:700;
+    }
+
+
+    @font-face {
+      font-family: 'orsted-maine';
+      src: url('../fonts/orsted-maine.eot') format('embedded-opentype'),
+          url('../fonts/orsted-maine.woff') format('woff'),
+          url('../fonts/orsted-maine.ttf')  format('truetype');
+          font-style:normal;
+          font-weight:900;
+    }

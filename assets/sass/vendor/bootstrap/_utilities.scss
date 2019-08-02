@@ -1,0 +1,132 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix;
+}
+.center-block {
+  @include center-block;
+}
+.pull-right {
+  float: right !important;
+}
+.pull-left {
+  float: left !important;
+}
+
+
+// Toggling content
+// -------------------------
+
+// Note: Deprecated .hide in favor of .hidden or .sr-only (as appropriate) in v3.0.1
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include text-hide;
+}
+
+
+// Hide from screenreaders and browsers
+//
+// Credit: HTML5 Boilerplate
+
+.hidden {
+  display: none !important;
+  visibility: hidden !important;
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}
+
+// Explicit non-semantic flex classes.
+
+// Core flex classes
+.flex { display: flex; }
+.inline-flex { display: inline-flex; }
+
+@media screen and (max-width: $screen-sm) {
+  .flex, .inline-flex {
+      display: block;
+  }
+}
+
+.direction-row { flex-direction: row; }
+.direction-col { flex-direction: column; }
+
+.flex-wrap { flex-wrap: wrap; }
+.flex-nowrap { flex-wrap: nowrap; }
+
+// Flex container classes
+.justify-start         { justify-content: flex-start; }
+.justify-end           { justify-content: flex-end; }
+.justify-center        { justify-content: center; }
+.justify-space-between { justify-content: space-between; }
+.justify-space-around  { justify-content: space-around; }
+
+.align-start           { align-items: flex-start; }
+.align-end             { align-items: flex-end; }
+.align-center          { align-items: center; }
+.align-baseline        { align-items: baseline; }
+.align-stretch         { align-items: stretch; }
+
+// Alignment across multiple rows/cols
+.align-items-start           { align-items: flex-start; }
+.align-items-end             { align-items: flex-end; }
+.align-items-center          { align-items: center; }
+.align-items-space-between   { align-items: space-between; }
+.align-items-space-around    { align-items: space-around; }
+.align-items-stretch         { align-items: stretch; }
+
+// Self-alignment of individual flex-items
+.align-self-auto       { align-self: auto; }
+.align-self-start      { align-self: flex-start; }
+.align-self-end        { align-self: flex-end; }
+.align-self-center     { align-self: center; }
+.align-self-baseline   { align-self: baseline; }
+.align-self-stretch    { align-self: stretch; }
+
+// Custom flex class
+.flex-row {
+    display: flex;
+    width: 100%;
+
+    .flex-col {
+      width: 50%;
+      display: flex;
+      padding: 40px;
+      overflow: hidden;
+      position: relative;
+      flex-direction: row;
+      align-items: flex-end;
+      
+      *:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    @media screen and (max-width: $screen-sm) {
+      flex-wrap: wrap;
+      flex-direction: column;
+
+      .flex-col {
+        width: 100%;
+      }
+    }
+}

@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Naturgas</title>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" type="text/css" href="assets/css/main.css?v=1.2">
+    <script src="//static.de-dynamisk.dk/netminers.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</head>
+<body>
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-KXZJ48"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KXZJ48');</script>
+    <!-- End Google Tag Manager -->
+        
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-63269475-1', 'auto');
+    </script>
+    <div class="container-fluid">
+        <form method="post" class="page-form">
+
+            <!-- Header -->
+            <header class="page">
+                <div class="row no-gutters">
+                    <div class="col-sm-12">
+                        <div class="row no-gutters flex">
+                            <div class="col-sm-12">
+
+                                
+                                <div class="form-group" style="margin-top:0">
+                                    <div class="form-group-content mandatory" data-error="Husk at udfylde feltet!" data-unit="m&sup2;">
+                                        <label>Hvor stor er din bolig?</label>
+                                        <input name="estateSize" data-init="orsted.input" data-type="numeric" type="text">
+                                    </div>
+                                    <small>Eventuelle kælderrum skal medtages.</small>
+                                </div>
+
+                                <a href="javascript:;" data-action="next" class="btn pull-right hidden-xs">Start</a>
+                            </div>
+                        </div>
+
+                        <div class="row no-gutters visible-xs">
+                            <div class="col-sm-12">
+                                <a href="javascript:;" data-action="next" class="btn block">Start</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <section class="page contact hidden">
+                <div class="contact-container">
+                    <section>
+                        <div class="row no-gutters">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hov! Du skal lige vælge et svar!">
+                                        <legend>Hvornår er din bolig fra?</legend>
+                                        Jo ældre din bolig er, des større er sandsynligheden for, at du bruger mere energi end gennemsnittet på grund af mangelfuld isolering.
+                                        <select name="estateAge" data-init="orsted.select">
+                                            <option value="">Vælg</option>
+                                            <option value="5">2012 og nyere</option>
+                                            <option value="8.3">2007-2012</option>
+                                            <option value="9.4">1999-2006</option>
+                                            <option value="10.65">1977-1998</option>
+                                            <option value="13.5">1960-1976</option>
+                                            <option value="16.75">før 1960</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="row no-gutters">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hov! Du skal lige vælge et svar!">
+                                        <legend>Hvor mange bor der i boligen?</legend>
+                                        Jo flere beboere, des højere er forbruget ofte, blandt andet fordi der bruges mere varmt vand.
+                                        <select name="residents" data-init="orsted.select">
+                                            <option value="">Vælg</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                            <option value="6">6</option>
+                                            <option value="7">7</option>
+                                            <option value="8">8</option>
+                                            <option value="9">9</option>
+                                            <option value="10">10</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <div class="row no-gutters">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hov! Du skal lige vælge et svar!">
+                                        <legend>Hvor gammelt er naturgasfyret?</legend>
+                                        Hvis naturgasfyret er godt oppe i årene, fungerer det sandsynligvis mindre effektivt og bruger derfor mere naturgas end nødvendigt.
+                                        <select name="gasburnerAge" data-init="orsted.select">
+                                            <option value="">Vælg</option>
+                                            <option value="0">0-2 år</option>
+                                            <option value="0">2-5 år</option>
+                                            <option value="0">5-10 år</option>
+                                            <option value="0">+10 år</option>
+                                            <option value="0">Ved ikke</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group center">
+                                    <div class="form-group-content">
+                                        <legend>Har du en serviceaftale?</legend>
+                                        <label class="basic-radiobutton-inline">
+                                            <input type="radio" data-init="orsted.radiobutton" name="serviceAgreement" value="1">
+                                            Ja
+                                        </label>
+                                        <label class="basic-radiobutton-inline">
+                                            <input type="radio" data-init="orsted.radiobutton" name="serviceAgreement" value="0">
+                                            Nej
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section>
+                        <b>Kender du dit årlige naturgas&shy;forbrug?</b>
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <p>
+                                   Hvis vi kender dit årlige naturgasforbrug (cirkatal) i boligen, kan vi sammenligne den med andre boliger, der ligner din. Vælg enhed (m<sup>3</sup> eller kr.) og indtast dit årlige naturgasforbrug.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="spacer hidden-xs"></div>
+
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content">
+                                        <label>Årligt naturgasforbrug</label>
+                                        <input name="usage" type="text" data-init="orsted.input" data-type="numeric">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content">
+                                        <legend>Enhed</legend>
+                                        <select name="unit" data-init="orsted.select">
+                                            <option value="m3" data-pretty="m<sup>3</sup>">m&sup3;</option>
+                                            <option value="kr">kr.</option>
+                                            <option value="0">Ved ikke</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-11">
+                                <small class="caption">
+                                   Du kan se dit årlige naturgasforbrug på din seneste naturgasregning eller i selvbetjeningen. Du kan også klikke på ‘Se resultat’ - så viser vores beregner det gennemsnitlige elforbrug for en hustand, der ligner din.
+                                </small>
+                            </div>
+                        </div>
+                    </section>
+
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="col-sm-12">
+                        <div class="btn-group navigation">
+                            <a href="javascript:;" data-action="prev" class="link-arrow-back">Tilbage</a>
+                            <a href="javascript:;" data-action="next" class="btn pull-right">Se resultat</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+            </section>
+
+            <section class="page result hidden collapse">
+            <!-- <section class="page result"> -->
+                <div class="row no-gutters theme-border z-pt-40">
+                    <div class="row no-gutters">
+                        <div class="col-sm-8 col-xs-12 col-sm-offset-2">
+                            <div class="meter-container">
+                                <svg class="meter" version="1.1" x="0px" y="0px" viewBox="0 0 640 404" preserveAspectRatio="xMidYMin meet">
+                                    <image class="house" x="0" y="0" width="640" height="404" xlink:href="assets/images/bg.svg" />
+                                    <image class="needle" x="310" y="0" width="20" height="320" xlink:href="assets/images/needle.svg" />
+                                    <image x="198" y="198.5" width="244" height="192" xlink:href="assets/images/cover.svg" />
+                                    <text class="text" transform="matrix(1 0 0 1 320 326.3184)" text-anchor="middle" style="fill: #3B4956; font-family: 'OrstedSans'; font-size: 60px; font-weight: 700;">0 %</text>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="final row no-gutters">
+                        <div class="col-sm-12">
+                            <h2>Du bruger <span class="percent"></span> <span class="under hidden">mindre</span><span class="over hidden">mere</span> gas end gennemsnittet</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="flex-col theme found z-ptb-60">
+                        <div class="theme-content">
+                            <p class="result-text"></p>
+                            <a href="javascript:;" data-action="first" class="btn">Tag testen igen</a>
+                        </div>
+                    </div>
+
+                    <div class="flex-col theme not-found z-ptb-60">
+                        <div class="theme-content">
+                            <p>
+                                <h2>Du har ikke oplyst dit årlige naturgasforbrug</h2>
+                                Derfor kan vi ikke sammenligne det med gennemsnittet for de boliger og hustande, der ligner din. Men du kan se, hvor deres gennemsnitlige naturgasforbrug ligger.
+                            </p>
+                            <a href="javascript:;" data-action="first" class="btn">Tag testen igen</a>
+                        </div>
+                    </div>
+
+                    <div class="flex-col theme-grey chart">
+                        <div class="theme-content">
+                            <div class="bar">
+                                <div class="bar-container">
+                                    <div class="bar-usage bar-style">
+                                        <div class="label">Dit forbrug</div>
+                                        <div class="bar-text-container">
+                                            <span class="usage">0</span><br/>
+                                            <span class="usage_price">0</span>
+                                        </div>
+                                    </div>
+                                    <div class="bar-average bar-style">
+                                        <div class="label">Gennemsnitsforbrug</div>
+                                        <div class="bar-text-container">
+                                            <span class="average">0</span><br/>
+                                            <span class="average_price">0</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <ul class="bar-bg">
+                                    <div class="bar-text">
+                                        <div class="text-usage text-style">Dit forbrug</div>
+                                        <div class="text-average text-style">Gennemsnitsforbrug</div>
+                                    </div>
+                                    <li>
+                                        <span class="label">0</span>
+                                    </li>
+                                    <li>
+                                        <span class="label">2.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="label">4.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="label">6.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="label">8.000</span>
+                                    </li>
+                                    <li>
+                                        <span class="label">10.000</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <p>Prisen pr. m<sup>3</sup> er 7,47 kr. + abonnement. Prisen er baseret på et gennemsnit af 2018 priser på Ørsteds Spotpris. Prisen er inkl. priser på distribution (HMN Gasnet), afgifter til staten og moms.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="row">
+
+                <div class="row no-gutters summary">
+                        <h2>3 effektive spareråd til dig</h2>
+                        <p>Se her, hvad vi vil anbefale dig at gøre, hvis du vil sænke dit energiforbrug og få mulighed for en lavere energiregning:</p>     
+                </div>
+
+                <div class="row no-gutters">
+                    <div class="theme-content theme-white-dark-blue">
+                        <div class="z-img-savings"><img src="assets/images/theme-image-1.jpg"></div>
+                        <b>Overvej, om du kan lave energiforbedringer</b>
+                        <p>Der kan være penge at spare, hvis du laver energiforbedringer i din bolig. Det kan f.eks. være efterisolering og udskiftning af vinduer eller kedel til naturgasfyr. Du kan søge os om tilskud til energiforbedringer.</p>
+                        <a href="https://privat.orsted.dk/kundeservice/tilskud/sog-om-tilskud/" target="_parent" class="btn btn-blue">Se hvad du kan få i tilskud</a>
+                    </div>
+                </div>
+
+                <div class="row no-gutters z-mt-60">
+                    <div class="theme-content theme-white-dark-blue">
+                        <div class="z-img-savings"><img src="assets/images/theme-image-2.jpg"></div>
+                        <b>Skru lidt ned for varmen</b>
+                        <p>Sænk temperaturen i alle rum fra 21 °C til 20 °C. Hvis du kan sænke temperaturen med 1 grad sparer du 5 % på udgifter til varmen. Se hvor du ellers kan spare penge.</p>
+                        <a href="https://privat.orsted.dk/kundeservice/forbrug/test-forbrug/test-energivaner/" target="_parent" class="btn btn-blue">Tag energitesten</a>
+                    </div>
+                </div>
+
+                <div class="row no-gutters z-mt-60">
+                    <div class="theme-content theme-white-dark-blue-red">
+                        <div class="z-img-savings"><img src="assets/images/theme-image-3.jpg"></div>
+                        <b>Luk dørene</b>
+                        <p>Hvis du har rum, du ikke bruger særlig ofte, kan du sænke temperaturen i dem ned til mellem 16-18 grader. Det må ikke være koldere da der kan opstå risiko for fugt. Så skal du bare sikre dig, at dørene lukker tæt, og at de forbliver lukkede, så radiatorerne i de andre rum ikke kommer på overarbejde.</p>
+                    </div>
+                </div>
+
+                <div class="row no-gutters z-mt-60 over hidden">
+                    <div class="theme-content theme-white-dark-blue">
+                        <div class="z-img-savings"><img src="assets/images/theme-image-4.jpg"></div>
+                        <b>Book en samtale med en energirådgiver</b>
+                        <p>Få en snak med en af vores energirådgivere om dine muligheder for at sænke dit energiforbrug. Du bestemmer
+                            selv, hvornår
+                            du vil ringes op, og vi afsætter cirka 30 minutter til at give dig gode råd.</p>
+                        <a href="https://privat.orsted.dk/kundeservice/forbrug/spoerg-energiraadgiverne/" target="_parent"
+                            class="btn btn-blue">Tag energitesten</a>
+                    </div>
+                </div>
+
+                
+
+                <hr class="row">
+            
+                <div class="row teaser newsletter under">
+                        <h2>Få sæsonens bedste tips</h2>
+                        Vil du gerne skrue ned for dit energiforbrug? Så tilmeld dig vores nyhedsbrev. Cirka 6 gange om året samler vi
+                        energirådgivernes bedste råd til energibesparelser i hjemmet og sender dem til dig sammen med den nyeste viden
+                        om god energi.
+                </div>
+            
+                <div class="row sign-up-confirmation hidden">
+                    <h2>Tak fordi du har tilmeldt dig</h2>
+                    <p>
+                        <span class="checkmark"></span>&nbsp;&nbsp;
+                        Vi håber, du bliver glad for det.
+                    </p>
+
+                    <div class="spacer"></div>
+
+                    <p>Her kan du se de informationer, du har givet os:</p>
+                    <p>
+                        <strong>Navn:</strong> <span data-bind="fullName"></span><br/>
+                        <strong>Adresse:</strong> <span data-bind="address"></span><br/>
+                        <strong>Telefon:</strong> <span data-bind="phone"></span><br/>
+                        <strong>E-mail:</strong> <span data-bind="mail"></span><br/>
+                        <span class="customerid-container"><strong>Kundenummer:</strong> <span data-bind="customerId"></span></span>
+                    </p>
+
+                    <div class="spacer"></div>
+
+                    <p>Hvis du på et tidspunkt finder ud af, at det ikke er noget for dig, kan du nemt afmelde dig igen.</p>
+                    
+                    <div class="spacer"></div>
+
+                    <a href="https://www.privat.orsted.dk/nyhedsbrev/afmeld-nyhedsbrev/" target="_blank" class="btn btn-blue">Afmeld her</a>
+                </div>
+
+
+
+                <div class="row sign-up-container">
+                    <form method="post" class="newsletter-form">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hvad er dit fornavn?">
+                                        <label>Fornavn</label>
+                                        <input name="name" data-init="orsted.input" data-validate=".{2,}"
+                                            data-error="Indtast et gyldigt navn" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hvad er dit efternavn?">
+                                        <label>Efternavn</label>
+                                        <input name="surName" data-init="orsted.input" data-validate=".{2,}"
+                                            data-error="Indtast et gyldigt navn" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hvad er adressen?">
+                                        <label>Adresse<span class="form-help"
+                                                data-help="Når vi kender din adresse, kan vi sende nyheder og tilbud, tilpasset dit nærområde, og som er relevant for dig."></span></label>
+                                        <input name="address" data-init="orsted.input" type="text" spellcheck="false"
+                                            data-type="autocomplete">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hvad er dit telefonnummer (8 tal)?">
+                                        <label>Telefon</label>
+                                        <input name="phone" data-init="orsted.input" type="tel" data-type="numeric" autocomplete="off"
+                                            data-validate="[0-9]{8}" data-error="Indtast et gyldigt nummer" maxlength="8">
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Hvad er din e-mailadresse?">
+                                        <label>E-mail</label>
+                                        <input name="email" data-init="orsted.input" type="text"
+                                            data-validate="^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$"
+                                            data-error="Er din e-mailadresse korrekt? Tjek, og prøv igen.">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row no-gutters">
+                            <div class="col-sm-6">
+                                <div class="spacer-large"></div>
+                                <div class="form-group">
+                                    <div class="form-group-content mandatory" data-error="Er du kunde hos os?">
+                                        <legend>Er du kunde hos os?</legend>
+                                        <label class="basic-radiobutton-inline">
+                                            <input type="radio" data-init="orsted.radiobutton" name="orstedCustomer" value="1">
+                                            Ja
+                                        </label>
+                                        <label class="basic-radiobutton-inline">
+                                            <input type="radio" data-init="orsted.radiobutton" name="orstedCustomer" value="0">
+                                            Nej
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                
+                            <div class="col-sm-6 customerid hidden">
+                                <div class="form-group">
+                                    <div class="form-group-content">
+                                        <label>Kundenummer</label>
+                                        <input name="customerId" data-init="orsted.input" type="text">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row no-gutters">
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <div class="form-group-content terms mandatory"
+                                        data-error="Du skal huske at acceptere leverings&shy;betingelser og vilkår">
+                                        <label class="terms-checkbox-inline">
+                                            <input type="checkbox" data-init="orsted.checkbox" name="terms" value="1">
+                                            Ja tak, jeg vil gerne modtage nyheder, gode tilbud og konkurrencer fra Ørsted Salg &amp;
+                                            Service A/S og
+                                        </label>
+                                        <a class="link-inline popover-trigger">Accepter betingelser</a>
+                                        <div class="popover full">
+                                            <div class="popover-content">
+                                                Ørsted Salg &amp; Service A/S må fremover kontakte dig via brev, e-mail, telefon og sms
+                                                med nyheder, relevant information, energisparetips, konkurrencer og gode tilbud om el,
+                                                naturgas, varmeservice og intelligente boligprodukter. Vi håber, du vil give det en
+                                                chance. Hvis det ikke er noget for dig, kan du nemt afmelde det igen. Vi sælger eller
+                                                giver selvfølgelig ikke dine oplysninger til andre.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                
+                        <div class="row no-gutters">
+                            <div class="col-sm-12">
+                                <div class="btn-group navigation hidden-xs">
+                                    <input type="submit" value="Få vores nyhedsbrev" class="btn pull-right">
+                                </div>
+                                <div class="btn-group navigation visible-xs">
+                                    <input type="submit" value="Få vores nyhedsbrev" class="btn">
+                                </div>
+                            </div>
+                        </div>
+                
+                    </form>
+                </div>
+
+
+
+
+                
+            </section>
+        </form>
+
+        
+
+    </div>
+    <script src="assets/js/vendor/iframeResizer.contentWindow.min.js"></script>
+    <script src="assets/js/vendor/LAB.min.js"></script>
+    <script>
+        $LAB
+            .setOptions({
+                CacheBust: true
+            })
+            .script([
+                'assets/js/vendor/hammer.min.js'
+            ]).wait()
+            .script([
+                'assets/js/vendor/activeLabel.js',
+                'assets/js/vendor/TweenLite.min.js',
+                'assets/js/vendor/CSSPlugin.min.js',
+                'assets/js/vendor/EasePack.min.js',
+                'assets/js/vendor/jquery.hammer.js',
+                'assets/js/vendor/jquery.qtip.min.js',
+                'assets/js/vendor/jquery.xdomainrequest.min.js'
+            ]).wait()
+            .script([
+                'assets/js/orsted.input.js',
+                'assets/js/orsted.radiobutton.js',
+                'assets/js/orsted.checkbox.js',
+                'assets/js/orsted.slider.js',
+                'assets/js/orsted.select.js',
+                'assets/js/orsted.datatypes.js',
+                'assets/js/orsted.validate.js',
+                'assets/js/vendor/jquery.autocomplete.min.js',
+                'assets/js/vendor/jquery.noty.packaged.min.js',
+                'assets/js/vendor/moment.js'
+            ]).wait()
+            .script([
+                'assets/js/main.js'
+            ]).wait(function(){
+                
+            });
+    </script>
+</body>
+</html>
