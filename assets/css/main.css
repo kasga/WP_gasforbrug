@@ -4724,6 +4724,8 @@ span.orsted-checkbox {
     margin-left: 30px; }
   .btn.active, .btn:visited {
     text-decoration: none; }
+  .btn:hover, .btn:focus {
+    background-color: #2580c2; }
 
 .link-inline {
   color: inherit;
